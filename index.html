@@ -5,22 +5,5 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title> Missão Nomes Aleatórios </title>
     </head> 
-    <body>
-        const nomes = ["Regina", "Jeferson", "Dominique", "Yasmin", "Natan", "Lorenzo", "Luna"];
-        export function aleatorio (lista){
-            const posicao = Math.floor(Math.random()* lista.length);
-            return lista[posicao];
-        }
-        function mostraResultado() {
-            caixaPerguntas.textContent = `Em 2049, ${nome}`;
-        }
-        function substituiNome() {
-            for (const pergunta of perguntas) {
-            pergunta.enunciado = pergunta.enunciado.replace(/você/g,
-            nome);
-        }
-    }
-    substituiNome();
-    mostraPergunta();
-    </body>
+    
 </html>
