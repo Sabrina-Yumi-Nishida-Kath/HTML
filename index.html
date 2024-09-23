@@ -3,20 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <title> Meu Projeto de Vida </title>
+        <title> Missão Nomes Aleatórios </title>
     </head> 
-    <body bgcolor=pink> 
-        <style> 
-            body{
-                font-family:Allura;
-                font-size:40px
-            }
-        </style>
-    <p1> Eu, Meus Sonhos e Desejos </p1> <br>
-    <p2> Meu nome é Sabrina Yumi Nishida Kath, tenho 17 anos e estudo no Colégio Estadual São Pedro Apóstolo, e assim como todos eu tenho sonhos, desejos metas e objetivos. Meu maior objetivo do momento é terminar o Ensino Médio. Quando eu era 
-        criança tinha muitas dúvidas sobre o que eu faria na faculdade, mas cheguei a decião de que cursaria Arquitetura. Na época minha mãe estava cursando Pedagogia na PUCPR, o que gerou em 
-        mim o desejo de fazer o curso na PUCPR também. <br>
-        No colégio eu faço a trilha de exatas e tenho acesso ao Alura, uma plataforma de cursos online focada em tecnologia, oferecem aulas nas áreas de programação, design e marketing digital.
-    </p2>
+    <body>
+        const nomes = ["Regina", "Jeferson", "Dominique", "Yasmin", "Natan", "Lorenzo", "Luna"];
+        export function aleatorio (lista){
+            const posicao = Math.floor(Math.random()* lista.length);
+            return lista[posicao];
+        }
+        function mostraResultado() {
+            caixaPerguntas.textContent = `Em 2049, ${nome}`;
+        }
+        function substituiNome() {
+            for (const pergunta of perguntas) {
+            pergunta.enunciado = pergunta.enunciado.replace(/você/g,
+            nome);
+        }
+    }
+    substituiNome();
+    mostraPergunta();
     </body>
 </html>
